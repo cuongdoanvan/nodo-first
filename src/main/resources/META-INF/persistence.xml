@@ -1,0 +1,33 @@
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
+
+<persistence-unit name="persistence">
+    <description>Demo Hibernate Entity Manager</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!--		<class>stackjava.com.hibernateentitymanager.entities.Customer</class>-->
+    <class>entities.Item</class>
+    <properties>
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+        <property name="javax.persistence.jdbc.url"
+                  value="jdbc:mysql://localhost:3306/criteriajpa" />
+        <property name="javax.persistence.jdbc.user" value="root" />
+        <property name="javax.persistence.jdbc.password" value="101220" />
+        <property name="hibernate.show_sql" value="true" />
+        <property name="hibernate.use_sql_comments" value="true" />
+        <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+
+
+        <!--			<property name="hibernate.c3p0.min_size" value="5"></property>-->
+        <!--			<property name="hibernate.c3p0.max_size" value="20"></property>-->
+        <!--			<property name="hibernate.c3p0.timeout" value="300"></property>-->
+        <!--			<property name="hibernate.c3p0.max_statements" value="50"></property>-->
+        <!--			<property name="hibernate.c3p0.idle_test_period" value="3000"></property>-->
+    </properties>
+
+</persistence-unit>
+
+</persistence>
